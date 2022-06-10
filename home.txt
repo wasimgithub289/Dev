@@ -2,6 +2,8 @@
 <head>
 </head>
 <body>
-This is main page
+This is header 
+
+This is footer
 </body>
 </html>
