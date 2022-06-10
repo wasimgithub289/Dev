@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+          
+    	<property name="hibernate.hbm2ddl.auto">update</property>  
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>  
+        <property name="connection.url">jdbc:h2:file:C:/Main1/testdb;</property>  
+        <property name="connection.username">sa</property>  
+        <property name="connection.password"></property>  
+        <property name="connection.driver_class">org.h2.Driver</property> 
+        <property name="hibernate.show_sql">true</property> 
+        <property name="hibernate.format_sql">true</property> 
+     
+        <!--<mapping class="com.javatpoint.mypackage.Employee"/>
+        <mapping class="com.javatpoint.mypackage.EmployeeCard"/>
+        <mapping class="com.javatpoint.mypackage.BankAccount"/>
+		<mapping class="com.javatpoint.mypackage.Skills"/>
+		<mapping class="com.javatpoint.mypackage.OfficeDetails"/>
+		<mapping class="com.javatpoint.mypackage.RegularEmployee"/>
+		<mapping class="com.javatpoint.mypackage.ContractEmployee"/> -->
+		
+		<mapping class="com.ng.entities.Employee"/>
+        <mapping class="com.ng.entities.PassportDetail"/>
+        <mapping class="com.ng.entities.Skills"/>
+        <mapping class="com.ng.entities.Department"/>
+        
+    </session-factory>
+</hibernate-configuration>

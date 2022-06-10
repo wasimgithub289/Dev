@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+<bean id="emp" class="com.ng.bean.Employee">  
+	<constructor-arg value="1" type="int"></constructor-arg> 
+	<constructor-arg value="Wasim" type="String"></constructor-arg>
+	
+	<constructor-arg>  
+		<list>  
+			<value>7262885682</value>  
+			<value>9967197097</value>  
+			<value>1234567890</value>
+			<value>1234567890</value> 
+			<value>3454365465</value> 
+			<value>34534534534</value>   
+		</list>  
+	</constructor-arg>
+	
+	<constructor-arg>  
+		<list>  
+			<ref bean="leave1"/>  
+			<ref bean="leave2"/> 
+		</list>  
+	</constructor-arg>
+	
+	<constructor-arg>  
+		<map>  
+			<entry key="1" value="Good"></entry>  
+			<entry key="2" value="Excellant"></entry>  
+			<entry key="3" value="Satisfactory"></entry> 
+			<entry key="4" value="Below Average"></entry>   
+		</map>  
+	</constructor-arg>  
+	
+	<constructor-arg>  
+		<ref bean="address"/>  
+	</constructor-arg> 
+	 
+</bean>
+
+<bean id="leave1" class="com.ng.bean.LeaveDetails">  
+	<constructor-arg value="1" type="int"></constructor-arg>  
+	<constructor-arg value="CL" type="String"></constructor-arg>  
+	<constructor-arg value="1" type="int"></constructor-arg>  
+</bean>  
+
+<bean id="leave2" class="com.ng.bean.LeaveDetails">  
+	<constructor-arg value="2" type="int"></constructor-arg>  
+	<constructor-arg value="PL" type="String"></constructor-arg>  
+	<constructor-arg value="5" type="int"></constructor-arg>  
+</bean>       
+
+<bean id="address" class="com.ng.bean.Address">  
+	<constructor-arg value="Thane Bhiwandi"></constructor-arg>  
+	<constructor-arg value="MH"></constructor-arg>  
+	<constructor-arg value="India"></constructor-arg>  
+</bean> 
+
+
+<!--
+**************************************************** 
+Dependency Injection by setter injection  
+********************************************************
+-->
+
+<bean id="emp1" class="com.ng.bean.Employee">  
+	<property name="id" value = "1"></property>  
+	<property name="name" value = "Wasim Ansari"></property> 
+	
+	<property name="contactNumber"> 
+		<list>  
+			<value>7262885682</value>  
+			<value>9967197097</value>  
+			<value>1234567890</value>
+			<value>1234567890</value> 
+			<value>3454365465</value> 
+			<value>34534534534</value>   
+		</list>  
+	</property> 
+	
+	<property name="apprailSalComment"> 
+		<map>  
+			<entry key="1" value="Good"></entry>  
+			<entry key="2" value="Excellant"></entry>  
+			<entry key="3" value="Satisfactory"></entry> 
+			<entry key="4" value="Below Average"></entry>   
+		</map>
+	</property>	
+	
+	<property name="address"> 
+		<ref bean="address"/> 
+	</property>
+	
+	<property name="leaveDetails"> 
+		<list>  
+			<ref bean="leave1"/>  
+			<ref bean="leave2"/> 
+		</list>
+	</property>
+	
+</bean>
+
+<!--
+**************************************************** 
+Dependency Injection by setter injection  
+********************************************************
+-->
+
+<bean id="emp3" class="com.ng.bean.Employee" autowire = "byName">  
+</bean>
+
+<!--
+**************************************************** 
+Dependency Injection by factroy method
+********************************************************
+-->
+
+<!-- 
+<bean id="emp4" class="com.ng.bean.Employee" autowire = "byType" factory-method="getEmpInstance">
+</bean>  
+ --> 
+</beans>  

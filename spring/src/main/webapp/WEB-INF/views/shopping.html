@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+      
+
+      <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+         
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <style>
+         
+      </style>
+    </head>
+
+    <body>
+
+
+          <nav>
+            <div class="nav-wrapper">
+              <a href="#"  data-target="slide-out" class="brand-logo"><i class="fa-solid fa-bars"></i>Logo</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html"> <i class="fa-solid fa-heart"></i> </a></li>
+                <li><a href="badges.html"><i class="fa-solid fa-cart-arrow-down"></i></a></li>
+                <li><a href="collapsible.html"><i class="fa-solid fa-gear"></i></a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <ul id="slide-out" class="sidenav">
+            <li><div class="user-view">
+              <div class="background">
+                <img src="images/office.jpg">
+              </div>
+              <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
+              <a href="#name"><span class="white-text name">John Doe</span></a>
+              <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+            <li><a href="#!">Second Link</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Subheader</a></li>
+            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+          </ul>
+          
+              
+
+          <div class="carousel carousel-slider">
+            <a class="carousel-item" href="#one!"><img src="../images/7.jpg"></a>
+            <a class="carousel-item" href="#two!"><img src="../images/8.jpg"></a>
+            <a class="carousel-item" href="#three!"><img src="../images/9.jpg"></a>
+            <a class="carousel-item" href="#four!"><img src="../images/10.jpg"></a>
+            <a class="carousel-item" href="#five!"><img src="../images/11.jpg"></a>
+          </div>
+
+          
+            <div class="row">
+                <div class="col s12 m3">
+                    <div class="card card-height">
+                        <div class="card-image">
+                        <img src="../images/7.jpg">
+                        <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                        <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m3">
+                    <div class="card card-height">
+                        <div class="card-image">
+                        <img src="../images/8.jpg">
+                        <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                        <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m3">
+                    <div class="card card-height">
+                        <div class="card-image">
+                        <img src="../images/9.jpg">
+                        <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                        <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m3">
+                    <div class="card card-height">
+                        <div class="card-image">
+                        <img src="../images/10.jpg">
+                        <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                        <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, {duration:1,numVisible:true,dist:0,indicators:true,fullWidth:true});
+
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, {});
+    });
+    </script>
+
+    </body>
+  </html>
